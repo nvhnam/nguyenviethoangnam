@@ -39,7 +39,7 @@ export default function Home() {
 
         <section>
           <p>
-            Welcome to my personal website. I'm a gradutate student majoring in{" "}
+            Welcome to my personal website. I'm a recent gradutate majoring in{" "}
             <strong>Information Technology</strong> at International University
             – VNU-HCM, Vietnam. This platform serves as a hub to showcase my
             academic journey, research work, and passion for using technology to

@@ -46,7 +46,7 @@ export default function Sidebar() {
             alt="Nguyen Viet Hoang Nam profile"
             width={150}
             height={150}
-            className="rounded-full object-cover w-32 h-32 mb-4 border-4 border-gray-300"
+            className="rounded-full object-cover w-32 h-32 mb-4 border-4 border-blue-200"
           />
           <h1 className="text-xl font-bold text-center">
             Nguyen Viet Hoang Nam

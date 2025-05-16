@@ -3,7 +3,7 @@ import Image from "next/image";
 /* eslint-disable react/no-unescaped-entities */
 export default function Home() {
   return (
-    <main className="p-6 md:p-12 max-w-6xl mx-auto text-justify space-y-6">
+    <main className="p-6 md:p-12 max-w-6xl mx-auto text-left md:text-justify space-y-6">
       {/* <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

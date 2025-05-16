@@ -1,56 +1,27 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
-import Image from "next/image";
-import Link from "next/link";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Sidebar from "@/components/Sidebar";
 import Home from "@/components/Home";
 import Experience from "@/components/Experience";
-import Head from "next/head";
 import Publications from "@/components/Publications";
+import Cv from "@/components/Cv";
 
-const navItems = [
-  "Home",
-  "Experience",
-  "Projects",
-  "Publications",
-  "CV",
-  "Contact",
-];
+const navItems = ["Home", "Experience", "Projects", "Publications", "CV"];
 
 export default function PortfolioLayout() {
   const [active, setActive] = useState("Home");
 
   return (
     <>
-      <Head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Person",
-              name: "Nguyen Viet Hoang Nam",
-              affiliation: "International University, VNU-HCMC",
-              jobTitle: "Undergraduate Researcher",
-              sameAs: [
-                "https://github.com/nvhnam",
-                "https://orcid.org/0009-0005-7710-6385",
-                "https://scholar.google.com/citations?user=EjUQvtUAAAAJ&hl=en",
-                "https://linkedin.com/in/nvhnam01",
-              ],
-            }),
-          }}
-        />
-      </Head>
       <div className="flex min-h-screen bg-slate-50 text-slate-800">
         {/* Sidebar */}
         <Sidebar />
 
         {/* Main Content */}
         <main className="w-full md:w-2/3 lg:w-2/3 p-6 mt-15 md:mt-0">
-          <nav className="sticky top-0 bg-slate-50 z-10 border-b border-gray-200 mb-6">
+          <nav className="top-0 bg-slate-50 z-10 border-b border-gray-200 mb-6">
             <div className="overflow-x-auto scrollbar-hide">
               <ul className="flex space-x-4 p-2 text-sm font-medium whitespace-nowrap">
                 {navItems.map((item) => (
@@ -82,6 +53,7 @@ export default function PortfolioLayout() {
               {active === "Home" && <Home />}
               {active === "Experience" && <Experience />}
               {active === "Publications" && <Publications />}
+              {active === "CV" && <Cv />}
             </motion.div>
           </section>
         </main>

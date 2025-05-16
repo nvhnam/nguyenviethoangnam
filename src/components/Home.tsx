@@ -53,11 +53,10 @@ export default function Home() {
             <strong>Human-Computer Interaction (HCI)</strong>, particularly in
             applying computer vision, artificial intelligence, and VR/AR to
             improve health awareness and user interaction. I have created the
-            largest Vietnamese food image dataset, the{" "}
-            <strong>VietFood67</strong>, to fine-tuned the{" "}
-            <strong>YOLOv10</strong> models for real-time food detection,
-            nutritional analysis, and user interaction through responsive and
-            accessible platform.
+            largest Vietnamese food image dataset, <strong>VietFood67</strong>,
+            to fine-tune the <strong>YOLOv10</strong> models for real-time food
+            detection, nutritional analysis, and user interaction through a
+            responsive and accessible platform.
           </p>
         </section>
 

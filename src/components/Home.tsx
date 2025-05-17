@@ -1,3 +1,4 @@
+import { awards, certificates } from "@/constants";
 import Image from "next/image";
 
 /* eslint-disable react/no-unescaped-entities */
@@ -88,6 +89,50 @@ export default function Home() {
             here. Feel free to explore my projects and publications or connect
             with me through my contact links on the left sidebar.
           </p>
+        </section>
+
+        <section itemScope itemType="https://schema.org/CreativeWork">
+          <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
+            Certificates
+          </h2>
+          <ul className="list-disc pl-6 text-base text-gray-700">
+            {certificates.map((cert, index) => (
+              <li key={index}>
+                {cert.title}{" "}
+                <a
+                  href={cert.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 underline"
+                  itemProp="url"
+                >
+                  [View]
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <section itemScope itemType="https://schema.org/CreativeWork">
+          <h2 className="text-2xl font-semibold text-gray-900 mt-10 mb-4">
+            Awards
+          </h2>
+          <ul className="list-disc pl-6 text-base text-gray-700">
+            {awards.map((award, index) => (
+              <li key={index}>
+                {award.title}{" "}
+                <a
+                  href={award.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 underline"
+                  itemProp="url"
+                >
+                  [View]
+                </a>
+              </li>
+            ))}
+          </ul>
         </section>
       </article>
     </main>

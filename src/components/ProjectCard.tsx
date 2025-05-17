@@ -19,7 +19,7 @@ export default function ProjectCard({
   detailsUrl,
 }: ProjectCardProps) {
   return (
-    <div className="bg-white cursor-pointer dark:bg-gray-900 rounded-2xl shadow-lg overflow-hidden flex flex-col transition hover:scale-[1.01]">
+    <div className="bg-white cursor-pointer rounded-2xl shadow-lg overflow-hidden flex flex-col transition hover:scale-[1.01]">
       <div className="relative w-full h-48">
         <Image
           src={image}
@@ -31,15 +31,13 @@ export default function ProjectCard({
       </div>
 
       <div className="p-4 flex flex-col justify-between grow">
-        <h2 className="text-xl font-semibold mb-2 text-gray-800 dark:text-white">
-          {title}
-        </h2>
+        <h2 className="text-xl font-semibold mb-2 text-gray-800 ">{title}</h2>
 
         <div className="flex flex-wrap gap-2 mb-4">
           {techStack.map((tech, index) => (
             <span
               key={index}
-              className="bg-gray-100 dark:bg-gray-700 text-sm px-2 py-1 rounded-full text-gray-800 dark:text-white"
+              className="bg-gray-100  text-sm px-2 py-1 rounded-full"
             >
               {tech}
             </span>
@@ -52,7 +50,7 @@ export default function ProjectCard({
               href={liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm font-medium text-blue-600 dark:text-blue-400 hover:underline"
+              className="text-sm font-medium text-blue-600 "
             >
               🔗 View Live
             </a>
@@ -60,7 +58,9 @@ export default function ProjectCard({
 
           <Link
             href={detailsUrl}
-            className="text-sm font-medium text-blue-600 dark:text-blue-400 hover:underline"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm font-medium text-blue-600  "
           >
             📄 View Details
           </Link>

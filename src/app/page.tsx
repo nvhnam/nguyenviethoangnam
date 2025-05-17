@@ -7,6 +7,7 @@ import Home from "@/components/Home";
 import Experience from "@/components/Experience";
 import Publications from "@/components/Publications";
 import Cv from "@/components/Cv";
+import ProjectsPage from "./projects/page";
 
 const navItems = ["Home", "Experience", "Projects", "Publications", "CV"];
 
@@ -52,6 +53,7 @@ export default function PortfolioLayout() {
             >
               {active === "Home" && <Home />}
               {active === "Experience" && <Experience />}
+              {active === "Projects" && <ProjectsPage />}
               {active === "Publications" && <Publications />}
               {active === "CV" && <Cv />}
             </motion.div>

@@ -9,7 +9,7 @@ import Publications from "@/components/Publications";
 import Cv from "@/components/Cv";
 import ProjectsPage from "./projects/page";
 
-const navItems = ["Home", "Experience", "Projects", "Publications", "CV"];
+const navItems = ["Home", "Experience", "Projects", "Publications"];
 
 export default function PortfolioLayout() {
   const [active, setActive] = useState("Home");

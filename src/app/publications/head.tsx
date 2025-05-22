@@ -1,7 +1,7 @@
 export default function Head() {
   return (
     <>
-      <title>Publications | Nguyen Viet Hoang Nam</title>
+      <title>Nguyen Viet Hoang Nam</title>
       <meta
         name="description"
         content="Research publications by Nguyen Viet Hoang Nam, including conference proceedings and book chapters in AI, computer vision, and nutrition tracking."

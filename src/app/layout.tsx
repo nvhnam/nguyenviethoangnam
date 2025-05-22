@@ -5,11 +5,11 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Nguyen Viet Hoang Nam | Research & Publications",
+  title: "Nguyen Viet Hoang Nam",
   description:
     "Official portfolio of Nguyen Viet Hoang Nam, showcasing academic publications, research in HCI and computer vision, and user-centered design projects.",
   keywords:
-    "Nguyen Viet Hoang Nam, HCI, Human Computer Interaction, Computer Vision, UX, VietFood67, FoodDetector, IU, research, publications",
+    "Nguyen Viet Hoang Nam, Viet Hoang Nam Nguyen, HCI, Human Computer Interaction, Computer Vision, UX, VietFood67, FoodDetector, IU, research, publications",
   authors: [
     {
       name: "Nguyen Viet Hoang Nam",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     },
   ],
   openGraph: {
-    title: "Nguyen Viet Hoang Nam | Research & Publications",
+    title: "Nguyen Viet Hoang Nam",
     description:
       "Explore the research and innovations by Nguyen Viet Hoang Nam in HCI, AI, and computer vision.",
     url: "https://nguyenviethoangnam.vercel.app",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nguyen Viet Hoang Nam | Research & Publications",
+    title: "Nguyen Viet Hoang Nam",
     description:
       "Academic portfolio and projects by Nguyen Viet Hoang Nam, including food recognition, AI models, human-computer interaction (HCI) and UX research.",
     images: ["https://nguyenviethoangnam.vercel.app/og-image.jpg"],

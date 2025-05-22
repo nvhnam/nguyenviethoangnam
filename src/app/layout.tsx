@@ -1,6 +1,8 @@
+/* eslint-disable @next/next/no-sync-scripts */
 import "@/styles/globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -78,9 +80,19 @@ export default function RootLayout({
           name="twitter:image"
           content="https://nguyenviethoangnam.vercel.app/og-image.jpg"
         />
+        <script
+          src="https://cdn.counter.dev/script.js"
+          data-id="bb44c1ba-51bb-4788-8133-389d0b16e742"
+          data-utcoffset="7"
+        ></script>
       </head>
       <body>
         <main>{children}</main>
+        <Script
+          src="https://cdn.counter.dev/script.js"
+          data-id="bb44c1ba-51bb-4788-8133-389d0b16e742"
+          data-utcoffset="7"
+        />
       </body>
     </html>
   );

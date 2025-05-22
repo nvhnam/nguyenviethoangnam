@@ -2,7 +2,6 @@
 import "@/styles/globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -10,8 +9,20 @@ export const metadata: Metadata = {
   title: "Nguyen Viet Hoang Nam",
   description:
     "Official portfolio of Nguyen Viet Hoang Nam, showcasing academic publications, research in HCI and computer vision, and user-centered design projects.",
-  keywords:
-    "Nguyen Viet Hoang Nam, Viet Hoang Nam Nguyen, HCI, Human Computer Interaction, Computer Vision, UX, VietFood67, FoodDetector, IU, research, publications",
+  keywords: [
+    "Nguyen Viet Hoang Nam",
+    "Viet Hoang Nam Nguyen",
+    "HCI",
+    "Human Computer Interaction",
+    "Computer Vision",
+    "VietFood67",
+    "FoodDetector",
+    "International University - VNU HCMC",
+    "UX",
+    "Vietnamese Food Detection",
+    "research",
+    "publications",
+  ],
   authors: [
     {
       name: "Nguyen Viet Hoang Nam",
@@ -80,19 +91,9 @@ export default function RootLayout({
           name="twitter:image"
           content="https://nguyenviethoangnam.vercel.app/og-image.jpg"
         />
-        <script
-          src="https://cdn.counter.dev/script.js"
-          data-id="bb44c1ba-51bb-4788-8133-389d0b16e742"
-          data-utcoffset="7"
-        ></script>
       </head>
       <body>
         <main>{children}</main>
-        <Script
-          src="https://cdn.counter.dev/script.js"
-          data-id="bb44c1ba-51bb-4788-8133-389d0b16e742"
-          data-utcoffset="7"
-        />
       </body>
     </html>
   );

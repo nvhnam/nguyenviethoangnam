@@ -66,37 +66,23 @@ export default function Sidebar() {
             </div>
             <div className="flex items-center gap-2">
               <Mail className="w-4 h-4 text-gray-600" />
-              <a href="mailto:nvhnam01@gmail.com" className="hover:underline">
-                nvhnam01@gmail.com
-              </a>
+              <a href="mailto:nvhnam01@gmail.com">nvhnam01@gmail.com</a>
             </div>
             <div className="flex items-center gap-2">
               <Linkedin className="w-4 h-4 text-blue-700" />
-              <a
-                href="https://www.linkedin.com/in/nvhnam01"
-                target="_blank"
-                className="hover:underline"
-              >
+              <a href="https://www.linkedin.com/in/nvhnam01" target="_blank">
                 nvhnam01
               </a>
             </div>
             <div className="flex items-center gap-2">
               <X className="w-4 h-4 text-blue-500" />
-              <a
-                href="https://x.com/nvh_nam"
-                target="_blank"
-                className="hover:underline"
-              >
+              <a href="https://x.com/nvh_nam" target="_blank">
                 nvh_nam
               </a>
             </div>
             <div className="flex items-center gap-2">
               <Github className="w-4 h-4 text-black" />
-              <a
-                href="https://github.com/nvhnam"
-                target="_blank"
-                className="hover:underline"
-              >
+              <a href="https://github.com/nvhnam" target="_blank">
                 nvhnam
               </a>
             </div>
@@ -106,19 +92,23 @@ export default function Sidebar() {
               <a
                 href="https://scholar.google.com/citations?user=EjUQvtUAAAAJ&hl=en"
                 target="_blank"
-                className="hover:underline"
               >
                 Google Scholar
               </a>
             </div>
             <div className="flex items-center gap-2">
-              <UserCircle className="w-4 h-4 text-gray-600" />
-              <a
-                href="https://orcid.org/0009-0005-7710-6385"
-                target="_blank"
-                className="hover:underline"
-              >
+              <UserCircle className="w-4 h-4 text-green-600" />
+              <a href="https://orcid.org/0009-0005-7710-6385" target="_blank">
                 ORCID
+              </a>
+            </div>
+            <div className="flex items-center gap-2">
+              <BookOpen className="w-4 h-4 text-orange-600" />
+              <a
+                href="https://www.scopus.com/authid/detail.uri?authorId=59772480900"
+                target="_blank"
+              >
+                Scopus
               </a>
             </div>
           </div>

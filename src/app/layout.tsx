@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   keywords: [
     "Nguyen Viet Hoang Nam",
     "Viet Hoang Nam Nguyen",
+    "Hoang Nam",
     "HCI",
     "Human Computer Interaction",
     "Computer Vision",

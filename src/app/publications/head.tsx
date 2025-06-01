@@ -17,7 +17,7 @@ export default function Head() {
             jobTitle: "Undergraduate Researcher",
             mainEntityOfPage: {
               "@type": "WebPage",
-              "@id": "https://nguyenviethoangnam.vercel.app/publications",
+              "@id": "https://nguyenviethoangnam.vercel.app",
             },
             knowsAbout: [
               "Computer Vision",

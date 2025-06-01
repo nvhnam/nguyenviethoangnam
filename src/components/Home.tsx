@@ -31,7 +31,7 @@ export default function Home() {
       <article className="text-gray-800 leading-relaxed space-y-8 text-lg">
         <Image
           src="/profile/ICCIT1.jpg"
-          alt="Nguyen Viet Hoang Nam - Profile"
+          alt="Nguyen Viet Hoang Nam"
           width={280}
           height={320}
           className="float-left mr-6 mb-4 rounded-lg object-cover"

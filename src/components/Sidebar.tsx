@@ -42,7 +42,7 @@ export default function Sidebar() {
       >
         <div className="p-6 flex flex-col items-center">
           <Image
-            src="/profile/Profile_pic.JPG"
+            src="/profile/Nguyen Viet Hoang Nam picture.webp"
             alt="Nguyen Viet Hoang Nam profile"
             width={150}
             height={150}

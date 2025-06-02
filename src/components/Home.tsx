@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main className="p-6 md:p-12 max-w-6xl mx-auto text-left md:text-justify space-y-6">
-      {/* <script
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
@@ -22,15 +22,17 @@ export default function Home() {
             ],
           }),
         }}
-      /> */}
+      />
+      {/* Nguyen Viet Hoang Nam - personal academic portfolio */}
 
-      {/* <h1 className="text-3xl font-bold text-gray-900 mb-6">
-        Welcome to My Website
-      </h1> */}
-
+      <span className="sr-only">
+        <strong>Nguyen Viet Hoang Nam</strong>
+        is a researcher in HCI and computer vision, with works like VietFood67
+        and FoodDetector.
+      </span>
       <article className="text-gray-800 leading-relaxed space-y-8 text-lg">
         <Image
-          src="/profile/ICCIT1.jpg"
+          src="/profile/Nguyen Viet Hoang Nam.webp"
           alt="Nguyen Viet Hoang Nam"
           width={280}
           height={320}

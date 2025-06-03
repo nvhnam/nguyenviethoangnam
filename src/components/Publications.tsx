@@ -56,9 +56,8 @@ export default function Publications() {
       {/* Nguyen Viet Hoang Nam - personal academic publishcations */}
 
       <span className="sr-only">
-        <strong>Nguyen Viet Hoang Nam</strong>
-        is a researcher in HCI and computer vision, with works like VietFood67
-        and FoodDetector.
+        <strong>Nguyen Viet Hoang Nam</strong> is a researcher in HCI and
+        computer vision, with works like VietFood67 and FoodDetector.
       </span>
       {/* Conference Proceedings */}
       <section>

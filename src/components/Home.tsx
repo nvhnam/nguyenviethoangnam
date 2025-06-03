@@ -26,9 +26,8 @@ export default function Home() {
       {/* Nguyen Viet Hoang Nam - personal academic portfolio */}
 
       <span className="sr-only">
-        <strong>Nguyen Viet Hoang Nam</strong>
-        is a researcher in HCI and computer vision, with works like VietFood67
-        and FoodDetector.
+        <strong>Nguyen Viet Hoang Nam</strong> is a researcher in HCI and
+        computer vision, with works like VietFood67 and FoodDetector.
       </span>
       <article className="text-gray-800 leading-relaxed space-y-8 text-lg">
         <Image

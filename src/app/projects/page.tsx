@@ -44,9 +44,8 @@ export default function ProjectsPage() {
   return (
     <section className="max-w-5xl mx-auto py-8 px-4">
       <span className="sr-only">
-        <strong>Nguyen Viet Hoang Nam</strong>
-        is a researcher in HCI and computer vision, with works like VietFood67
-        and FoodDetector.
+        <strong>Nguyen Viet Hoang Nam</strong> is a researcher in HCI and
+        computer vision, with works like VietFood67 and FoodDetector.
       </span>
       <div className="grid gap-8 lg:grid-cols-2 sm:grid-cols-1">
         {projects.map((project, index) => (

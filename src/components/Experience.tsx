@@ -3,9 +3,8 @@ export default function Experience() {
     <section id="experience" className="mt-10">
       {/* <h2 className="text-3xl font-bold mb-6">Experience</h2> */}
       <span className="sr-only">
-        <strong>Nguyen Viet Hoang Nam</strong>
-        is a researcher in HCI and computer vision, with works like VietFood67
-        and FoodDetector.
+        <strong>Nguyen Viet Hoang Nam</strong> is a researcher in HCI and
+        computer vision, with works like VietFood67 and FoodDetector.
       </span>
       <div className="mb-10">
         <div className="flex flex-col sm:flex-row justify-between sm:items-center">

@@ -55,7 +55,7 @@ export default function PortfolioLayout() {
               {active === "Experience" && <Experience />}
               {active === "Projects" && <ProjectsPage />}
               {active === "Publications" && <Publications />}
-              {active === "CV" && <Cv />}
+              {/* {active === "CV" && <Cv />} */}
             </motion.div>
           </section>
         </main>

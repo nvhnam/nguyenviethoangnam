@@ -48,7 +48,7 @@ export default function ProjectsPage() {
         is a researcher in HCI and computer vision, with works like VietFood67
         and FoodDetector.
       </span>
-      <div className="grid gap-8 md:grid-cols-2 sm:grid-cols-1">
+      <div className="grid gap-8 lg:grid-cols-2 sm:grid-cols-1">
         {projects.map((project, index) => (
           <ProjectCard key={index} {...project} />
         ))}

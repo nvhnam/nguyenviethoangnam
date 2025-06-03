@@ -65,7 +65,7 @@ export default function Sidebar() {
               <span>International University</span>
             </div>
             <div className="flex items-center gap-2">
-              <Mail className="w-4 h-4 text-gray-600" />
+              <Mail className="w-4 h-4 text-red-400" />
               <a href="mailto:nvhnam01@gmail.com">nvhnam01@gmail.com</a>
             </div>
             <div className="flex items-center gap-2">

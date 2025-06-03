@@ -1,12 +1,9 @@
-// const submittedPreprints = [
-// ];
-
 const conferenceProceedings = [
   {
     title:
       "Now I Know What I Am Eating: Real-Time Tracking and Nutritional Insights Using VietFood67 to Enhance User Experience",
     authors: "Nguyen, V. H. N., Tran, B. T., That, M. V. T., & Vi, C. T.",
-    year: 2025,
+    year: 2024,
     venue:
       "Information and Communication Technology – Proceedings of the 13th International Symposium on Information and Communication Technology (SOICT 2024), Communications in Computer and Information Science, vol. 2352, Springer, Singapore",
     url: "https://doi.org/10.1007/978-981-96-4288-5_35",
@@ -55,115 +52,95 @@ export default function Publications() {
   const groupedBooks = groupByYear(bookChapters);
 
   return (
-    <>
-      <div className="space-y-10">
-        {/* Submitted Preprints */}
-        {/* <section>
-          <h2 className="text-2xl font-semibold mb-2">Submitted Preprints</h2>
-          <div className="space-y-3">
-            {submittedPreprints.map((pub, index) => (
-              <div key={index}>
-                <p className="text-sm">
-                  <span
-                    dangerouslySetInnerHTML={{
-                      __html: highlightAuthor(pub.authors),
-                    }}
-                  />
-                  .{" "}
-                  <a
-                    href={pub.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-600 underline"
+    <div className="space-y-10">
+      {/* Nguyen Viet Hoang Nam - personal academic publishcations */}
+
+      <span className="sr-only">
+        <strong>Nguyen Viet Hoang Nam</strong>
+        is a researcher in HCI and computer vision, with works like VietFood67
+        and FoodDetector.
+      </span>
+      {/* Conference Proceedings */}
+      <section>
+        <h2 className="text-2xl font-semibold mt-8 mb-4">
+          Conference Proceedings
+        </h2>
+        {Object.entries(groupedConference)
+          .sort(([a], [b]) => Number(b) - Number(a))
+          .map(([year, pubs]) => (
+            <div key={year} className="mb-6">
+              <ul className="space-y-3">
+                {pubs.map((pub, i) => (
+                  <li
+                    key={i}
+                    itemScope
+                    itemType="https://schema.org/ScholarlyArticle"
                   >
-                    <em>{pub.title}</em>
-                  </a>
-                  .{" "}
-                  <span>
-                    {pub.venue}, <strong>{pub.year}</strong>.
-                  </span>
-                </p>
-              </div>
-            ))}
-          </div>
-        </section> */}
+                    <p>
+                      <span
+                        dangerouslySetInnerHTML={{
+                          __html: highlightAuthor(pub.authors),
+                        }}
+                      />
+                      .{" "}
+                      <a
+                        href={pub.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-600 underline"
+                        itemProp="url"
+                      >
+                        <em itemProp="name">{pub.title}</em>
+                      </a>
+                      .{" "}
+                      <span itemProp="publisher">
+                        {pub.venue}, {pub.year}.
+                      </span>
+                    </p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+      </section>
 
-        {/* Conference Proceedings */}
-        <section>
-          <h2 className="text-2xl font-semibold mt-8 mb-4">
-            Conference Proceedings
-          </h2>
-          {Object.entries(groupedConference)
-            .sort(([a], [b]) => Number(b) - Number(a))
-            .map(([year, pubs]) => (
-              <div key={year} className="mb-6">
-                <div className="space-y-3">
-                  {pubs.map((pub, i) => (
-                    <div key={i}>
-                      <p>
-                        <span
-                          dangerouslySetInnerHTML={{
-                            __html: highlightAuthor(pub.authors),
-                          }}
-                        />
-                        .{" "}
-                        <a
-                          href={pub.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-blue-600 underline"
-                        >
-                          <em>{pub.title}</em>
-                        </a>
-                        .{" "}
-                        <span>
-                          {pub.venue}, {pub.year}.
-                        </span>
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-        </section>
-
-        {/* Book Chapters */}
-        <section>
-          <h2 className="text-2xl font-semibold mt-8 mb-4">Book Chapters</h2>
-          {Object.entries(groupedBooks)
-            .sort(([a], [b]) => Number(b) - Number(a))
-            .map(([year, pubs]) => (
-              <div key={year} className="mb-6">
-                <div className="space-y-3">
-                  {pubs.map((pub, i) => (
-                    <div key={i}>
-                      <p>
-                        <span
-                          dangerouslySetInnerHTML={{
-                            __html: highlightAuthor(pub.authors),
-                          }}
-                        />
-                        .{" "}
-                        <a
-                          href={pub.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-blue-600 underline"
-                        >
-                          <em>{pub.title}</em>
-                        </a>
-                        .{" "}
-                        <span>
-                          {pub.venue}, {pub.year}.
-                        </span>
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-        </section>
-      </div>
-    </>
+      {/* Book Chapters */}
+      <section>
+        <h2 className="text-2xl font-semibold mt-8 mb-4">Book Chapters</h2>
+        {Object.entries(groupedBooks)
+          .sort(([a], [b]) => Number(b) - Number(a))
+          .map(([year, pubs]) => (
+            <div key={year} className="mb-6">
+              <ul className="space-y-3">
+                {pubs.map((pub, i) => (
+                  <li key={i} itemScope itemType="https://schema.org/Chapter">
+                    <p>
+                      <span
+                        dangerouslySetInnerHTML={{
+                          __html: highlightAuthor(pub.authors),
+                        }}
+                      />
+                      .{" "}
+                      <a
+                        href={pub.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-600 underline"
+                        itemProp="url"
+                      >
+                        <em itemProp="name">{pub.title}</em>
+                      </a>
+                      .{" "}
+                      <span itemProp="publisher">
+                        {pub.venue}, {pub.year}.
+                      </span>
+                    </p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+      </section>
+    </div>
   );
 }

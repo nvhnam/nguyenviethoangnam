@@ -1,4 +1,4 @@
-import { awards, certificates } from "@/constants";
+import { awards, certificates, educations } from "@/constants";
 import Image from "next/image";
 
 /* eslint-disable react/no-unescaped-entities */
@@ -93,8 +93,44 @@ export default function Home() {
           </p>
         </section>
 
-        <section itemScope itemType="https://schema.org/CreativeWork">
+        <section
+          itemScope
+          itemType="https://schema.org/EducationOccupationalCredential"
+        >
           <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
+            Education
+          </h2>
+
+          <div className="space-y-6 text-base text-gray-800">
+            {educations.map((edu, index) => (
+              <article
+                key={index}
+                itemProp="educationalCredentialAwarded"
+                itemScope
+                itemType="https://schema.org/EducationalOccupationalCredential"
+              >
+                <p className="italic text-gray-700 mb-1">
+                  <time itemProp="startDate" dateTime={edu.startTime}>
+                    {edu.startTime}
+                  </time>{" "}
+                  -{" "}
+                  <time itemProp="endDate" dateTime={edu.endTime}>
+                    {edu.endTime}
+                  </time>
+                </p>
+                <p>
+                  <span itemProp="name">{edu.title}</span>,{" "}
+                  <span itemProp="educationalInstitution">
+                    {edu.institution}.
+                  </span>
+                </p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section itemScope itemType="https://schema.org/CreativeWork">
+          <h2 className="text-2xl font-semibold text-gray-900 mt-10 mb-4">
             Certificates
           </h2>
           <ul className="list-disc pl-6 text-base text-gray-700">

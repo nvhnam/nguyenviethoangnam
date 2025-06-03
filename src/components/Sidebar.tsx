@@ -30,6 +30,7 @@ export default function Sidebar() {
     <>
       <button
         className="md:hidden fixed top-4 left-4 z-40 bg-gray-100 p-2 rounded-lg shadow-md"
+        aria-label="Open menu"
         onClick={() => setIsOpen(!isOpen)}
       >
         <Menu />

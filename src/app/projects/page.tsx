@@ -10,7 +10,7 @@ const projects = [
     detailsUrl: "https://github.com/nvhnam/FoodDetector",
   },
   {
-    title: "NutriGuide",
+    title: "TrafficShop",
     image: "/projects/NutriGuide.webp",
     techStack: [
       "ReactJS",
@@ -20,9 +20,9 @@ const projects = [
       "MySQL",
       "Langchain",
     ],
-    liveUrl: "https://nutriguiding.vercel.app",
+    liveUrl: "https://traffic-shop.vercel.app",
     // detailsUrl: "/projects/grocery-ai",
-    detailsUrl: "https://github.com/nvhnam/NutriGuiding",
+    detailsUrl: "https://github.com/nvhnam/TrafficShop/tree/main",
   },
   {
     title: "TheBlog",

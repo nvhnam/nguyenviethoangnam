@@ -2,7 +2,7 @@ export const MY_CV_URL = "/cv/AI-Engineer-Intern_Nam-Nguyen_Resume.pdf";
 
 export const educations = [
   {
-    title: "BEng in Information Technology",
+    title: "B.Eng. in Information Technology",
     institution:
       "Vietnam National University, International University, Ho Chi Minh City, Vietnam",
     time: "2019 - 2025",

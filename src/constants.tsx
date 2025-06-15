@@ -11,6 +11,29 @@ export const educations = [
   },
 ];
 
+export const workExperience = [
+  {
+    company: "M_Service JSC (MoMo)",
+    position: "Java Developer Intern",
+    date: "June 2025 – Now",
+    location: "Ho Chi Minh City, Vietnam",
+    responsibilities: [],
+    slug: "Momo-java-developer-intern",
+  },
+  {
+    company: "Yusen Logistics Co., Ltd.",
+    position: "IT Support Intern",
+    date: "July 2023 – October 2023",
+    location: "Ho Chi Minh City, Vietnam",
+    responsibilities: [
+      "Diagnosed and resolved technical issues across office workstations.",
+      "Wrote clear documentation for troubleshooting processes and software installations, improving support efficiency and technical communication.",
+      "Supported internal users with Microsoft Office, email systems, and basic network issues.",
+    ],
+    slug: "yusen-logistics-it-intern",
+  },
+];
+
 export const certificates = [
   {
     title: "IELTS - 7.5 (11/2024 - 11/2026)",

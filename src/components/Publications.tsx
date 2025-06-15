@@ -52,7 +52,7 @@ export default function Publications() {
   const groupedBooks = groupByYear(bookChapters);
 
   return (
-    <div className="space-y-10">
+    <div className="space-y-10 ">
       {/* Nguyen Viet Hoang Nam - personal academic publishcations */}
 
       <span className="sr-only">

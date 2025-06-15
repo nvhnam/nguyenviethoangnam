@@ -49,7 +49,11 @@ export default function PortfolioLayout() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3 }}
-              className="bg-white p-6 rounded-lg shadow"
+              className={`${
+                active !== "Experience" && active !== "Projects"
+                  ? "p-6 bg-white rounded-lg shadow"
+                  : ""
+              }`}
             >
               {active === "Home" && <Home />}
               {active === "Experience" && <Experience />}

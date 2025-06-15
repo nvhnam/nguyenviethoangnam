@@ -16,6 +16,8 @@ export const metadata: Metadata = {
     "VietFood67",
     "Vietnam",
     "Viet Nam",
+    "Java Developer",
+    "Momo intern",
     "VietFood57",
     "FoodDetector",
     "Vietnamese Food Detection",

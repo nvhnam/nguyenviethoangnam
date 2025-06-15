@@ -1,4 +1,5 @@
 import { workExperience } from "@/constants";
+import Script from "next/script";
 
 export default function Experience() {
   return (
@@ -9,6 +10,59 @@ export default function Experience() {
       itemScope
       itemType="https://schema.org/Person"
     >
+      <Script
+        type="application/ld+json"
+        id="structured-data"
+        strategy="afterInteractive"
+      >
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Person",
+          name: "Nguyen Viet Hoang Nam",
+          hasOccupation: [
+            {
+              "@type": "Occupation",
+              name: "Java Developer Intern",
+              hiringOrganization: {
+                "@type": "Organization",
+                name: "M_Service JSC (MoMo)",
+              },
+              startDate: "2025-06",
+              location: {
+                "@type": "Place",
+                address: {
+                  "@type": "PostalAddress",
+                  addressLocality: "Ho Chi Minh City",
+                  addressCountry: "Vietnam",
+                },
+              },
+              description:
+                "Developing and maintaining Java-based applications, collaborating in Agile teams, and improving code quality.",
+            },
+            {
+              "@type": "Occupation",
+              name: "IT Support Intern",
+              hiringOrganization: {
+                "@type": "Organization",
+                name: "Yusen Logistics Co., Ltd.",
+              },
+              startDate: "2023-07",
+              endDate: "2023-10",
+              location: {
+                "@type": "Place",
+                address: {
+                  "@type": "PostalAddress",
+                  addressLocality: "Ho Chi Minh City",
+                  addressCountry: "Vietnam",
+                },
+              },
+              description:
+                "Diagnosed and resolved technical issues across office workstations, wrote clear documentation for troubleshooting and software installations, and supported users with Microsoft Office, email systems, and basic networking.",
+            },
+          ],
+        })}
+      </Script>
+
       <span className="sr-only" itemProp="name">
         Nguyen Viet Hoang Nam
       </span>

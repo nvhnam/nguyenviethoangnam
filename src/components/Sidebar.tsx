@@ -71,7 +71,10 @@ export default function Sidebar() {
             </div>
             <div className="flex items-center gap-2">
               <Linkedin className="w-4 h-4 text-blue-700" />
-              <a href="https://www.linkedin.com/in/nvhnam01" target="_blank">
+              <a
+                href="https://www.linkedin.com/in/nguyenviethoangnam"
+                target="_blank"
+              >
                 nvhnam01
               </a>
             </div>

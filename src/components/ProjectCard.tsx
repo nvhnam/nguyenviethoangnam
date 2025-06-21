@@ -26,7 +26,8 @@ export default function ProjectCard({
           alt={`${title} Cover`}
           fill
           className="object-cover"
-          priority
+          itemProp="image"
+          loading="lazy"
         />
       </div>
 

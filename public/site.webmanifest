@@ -1,8 +1,8 @@
 {
-  "name": "Nguyen Viet Hoang Nam | Research & Publications",
-  "short_name": "NVHN Research",
-  "description": "Explore Nguyen Viet Hoang Nam's research in HCI, AI, computer vision, and UX.",
-  "start_url": "/",
+  "name": "Nguyen Viet Hoang Nam | Research, HCI & Publications",
+  "short_name": "Nguyen, V. H. N. Research",
+  "description": "Portfolio of Nguyen Viet Hoang Nam, researcher in Human-Computer Interaction, Artificial Intelligence, Extended Reality (XR) and Computer Vision. Explore his academic publications, projects, and conference activity.",
+  "start_url": "/?source=pwa",
   "scope": "/",
   "display": "standalone",
   "theme_color": "#ffffff",
@@ -17,7 +17,15 @@
       "src": "/android-chrome-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
+    },
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon",
+      "purpose": "any"
     }
   ],
-  "lang": "en"
+  "lang": "en",
+  "orientation": "portrait-primary",
+  "dir": "ltr"
 }

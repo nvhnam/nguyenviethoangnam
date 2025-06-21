@@ -1,34 +1,4 @@
-const conferenceProceedings = [
-  {
-    title:
-      "Now I Know What I Am Eating: Real-Time Tracking and Nutritional Insights Using VietFood67 to Enhance User Experience",
-    authors: "Nguyen, V. H. N., Tran, B. T., That, M. V. T., & Vi, C. T.",
-    year: 2024,
-    venue:
-      "Information and Communication Technology – Proceedings of the 13th International Symposium on Information and Communication Technology (SOICT 2024), Communications in Computer and Information Science, vol. 2352, Springer, Singapore",
-    url: "https://doi.org/10.1007/978-981-96-4288-5_35",
-  },
-  {
-    title:
-      "Navigating Nutrition: Online Grocery Solutions with Traffic Light Labels and AI Support in Vietnam",
-    authors: "Nguyen, V. H. N., Tran, B. T., Nguyen, S. H., & Vi, C. T.",
-    year: 2024,
-    venue: "International University Annual Scientific Conference",
-    url: "https://drive.google.com/file/d/1mbRsFIv5GcVdwPfHO66movCc8WN9yFca/view?usp=sharing",
-  },
-];
-
-const bookChapters = [
-  {
-    title:
-      "It’s Yummy: Real-Time Detection and Recognition of Vietnamese Dishes",
-    authors: "Nguyen, V. H. N., & Vi, C. T.",
-    year: 2025,
-    venue:
-      "In A. Bijalwan (Ed.), Navigating Computing Challenges for a Sustainable World (pp. 1–16). IGI Global Scientific Publishing",
-    url: "https://doi.org/10.4018/979-8-3373-0462-5.ch001",
-  },
-];
+import { bookChapters, conferenceProceedings } from "@/constants";
 
 const highlightAuthor = (authors: string) => {
   return authors.replace(
@@ -52,15 +22,15 @@ export default function Publications() {
   const groupedBooks = groupByYear(bookChapters);
 
   return (
-    <div className="space-y-10 ">
-      {/* Nguyen Viet Hoang Nam - personal academic publishcations */}
+    <div className="space-y-10">
+      {/* Nguyen Viet Hoang Nam - research publishcations */}
 
-      <span className="sr-only">
-        <strong>Nguyen Viet Hoang Nam</strong> is a researcher in HCI and
-        computer vision, with works like VietFood67 and FoodDetector.
-      </span>
+      <h1 className="sr-only">
+        Research publications of Nguyen Viet Hoang Nam in HCI, Extended Reality
+        (XR), and computer vision
+      </h1>
       {/* Conference Proceedings */}
-      <section>
+      <section className="bg-white p-6 rounded-xl shadow-md border border-gray-200">
         <h2 className="text-2xl font-semibold mt-8 mb-4">
           Conference Proceedings
         </h2>
@@ -70,17 +40,25 @@ export default function Publications() {
             <div key={year} className="mb-6">
               <ul className="space-y-3">
                 {pubs.map((pub, i) => (
-                  <li
+                  <article
                     key={i}
                     itemScope
                     itemType="https://schema.org/ScholarlyArticle"
+                    className="block"
                   >
                     <p>
                       <span
-                        dangerouslySetInnerHTML={{
-                          __html: highlightAuthor(pub.authors),
-                        }}
-                      />
+                        itemProp="author"
+                        itemScope
+                        itemType="https://schema.org/Person"
+                      >
+                        <span
+                          itemProp="name"
+                          dangerouslySetInnerHTML={{
+                            __html: highlightAuthor(pub.authors),
+                          }}
+                        />
+                      </span>
                       .{" "}
                       <a
                         href={pub.url}
@@ -95,8 +73,14 @@ export default function Publications() {
                       <span itemProp="publisher">
                         {pub.venue}, {pub.year}.
                       </span>
+                      <span itemProp="description" className="sr-only">
+                        This paper introduces a real-time food recognition
+                        system using YOLOv10 and the VietFood67 dataset to
+                        improve user dietary awareness through visual AR
+                        feedback.
+                      </span>
                     </p>
-                  </li>
+                  </article>
                 ))}
               </ul>
             </div>
@@ -104,7 +88,7 @@ export default function Publications() {
       </section>
 
       {/* Book Chapters */}
-      <section>
+      <section className="bg-white p-6 rounded-xl shadow-md border border-gray-200">
         <h2 className="text-2xl font-semibold mt-8 mb-4">Book Chapters</h2>
         {Object.entries(groupedBooks)
           .sort(([a], [b]) => Number(b) - Number(a))
@@ -132,6 +116,12 @@ export default function Publications() {
                       .{" "}
                       <span itemProp="publisher">
                         {pub.venue}, {pub.year}.
+                      </span>
+                      <span itemProp="description" className="sr-only">
+                        This paper introduces a real-time food recognition
+                        system using YOLOv10 and the VietFood67 dataset to
+                        improve user dietary awareness through visual AR
+                        feedback.
                       </span>
                     </p>
                   </li>

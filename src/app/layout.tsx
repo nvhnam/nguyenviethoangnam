@@ -8,19 +8,22 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Nguyen Viet Hoang Nam",
   description:
-    "Official portfolio of Nguyen Viet Hoang Nam, showcasing academic publications, research in HCI and computer vision, and user-centered design projects.",
+    "Official portfolio of Nguyen Viet Hoang Nam, who is a Java Developer Intern at Momo and Human-Computer Interaction researcher focused on AI, AR/VR, and computer vision. Explore his research, conference activities, and technical projects.",
   keywords: [
     "Nguyen Viet Hoang Nam",
     "Viet Hoang Nam Nguyen",
-    "Hoang Nam",
+    "Hoang Nam Java Developer",
     "VietFood67",
+    "Java Developer at Momo",
     "Vietnam",
     "Viet Nam",
-    "Java Developer",
+    "Java Developer Intern",
     "Momo intern",
     "VietFood57",
     "FoodDetector",
     "Vietnamese Food Detection",
+    "Extended Reality (XR)",
+    "VR",
     "HCI",
     "Human Computer Interaction",
     "Computer Vision",
@@ -37,7 +40,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Nguyen Viet Hoang Nam",
     description:
-      "Explore the research and innovations by Nguyen Viet Hoang Nam in HCI, AI, and computer vision.",
+      "Nguyen Viet Hoang Nam is a Java Developer Intern and Human-Computer Interaction researcher focused on AI, AR/VR, and computer vision. Explore his research, conference activities, and technical projects.",
     url: "https://nguyenviethoangnam.vercel.app",
     siteName: "Nguyen Viet Hoang Nam",
     images: [
@@ -69,7 +72,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Nguyen Viet Hoang Nam",
     description:
-      "Academic portfolio and projects by Nguyen Viet Hoang Nam, including food recognition, AI models, human-computer interaction (HCI) and UX research.",
+      "Professional portfolio and projects by Nguyen Viet Hoang Nam, including food recognition, AI models, human-computer interaction (HCI) and UX research.",
     images: ["https://nguyenviethoangnam.vercel.app/og-image.jpg"],
   },
   metadataBase: new URL("https://nguyenviethoangnam.vercel.app/"),

@@ -4,7 +4,7 @@ export default function Head() {
       <title>Nguyen Viet Hoang Nam</title>
       <meta
         name="description"
-        content="Research publications by Nguyen Viet Hoang Nam, including conference proceedings and book chapters in AI, computer vision, and nutrition tracking."
+        content="Research publications by Nguyen Viet Hoang Nam, including conference proceedings and book chapters in HCI, Extended Reality (XR), computer vision, and nutrition tracking."
       />
       <script
         type="application/ld+json"
@@ -14,7 +14,7 @@ export default function Head() {
             "@type": "Person",
             name: "Nguyen Viet Hoang Nam",
             affiliation: "International University, VNU-HCMC",
-            jobTitle: "Undergraduate Researcher",
+            jobTitle: "HCI Researcher & Java Developer",
             mainEntityOfPage: {
               "@type": "WebPage",
               "@id": "https://nguyenviethoangnam.vercel.app",
@@ -22,6 +22,7 @@ export default function Head() {
             knowsAbout: [
               "Computer Vision",
               "Human Behavior",
+              "Java Developer",
               "AI in Nutrition",
               "VietFood67",
               "FoodDetector",

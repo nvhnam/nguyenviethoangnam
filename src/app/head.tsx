@@ -4,11 +4,23 @@ export default function Head() {
       <title>Nguyen Viet Hoang Nam</title>
       <meta
         name="description"
-        content="Explore Nguyen Viet Hoang Nam's research in HCI, AI, and UX."
+        content="Nguyen Viet Hoang Nam is a Java Developer Intern and Human-Computer Interaction researcher focused on AI, AR/VR, and computer vision. Explore his research, conference activities, and technical projects."
       />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta charSet="utf-8" />
       <meta name="theme-color" content="#ffffff" />
+      <meta name="robots" content="index, follow" />
+      <meta property="og:type" content="website" />
+      <meta property="og:image" content="/profile/Nguyen Viet Hoang Nam.webp" />
+      <meta property="og:title" content="Nguyen Viet Hoang Nam | Portfolio" />
+      <meta
+        property="og:description"
+        content="Java Developer Intern and HCI Researcher using AI and computer vision to solve real-world problems."
+      />
+      <meta
+        property="og:url"
+        content="https://nguyenviethoangnam.vercel.app/"
+      />
       <link rel="icon" href="/favicon.ico" />
       <link
         rel="apple-touch-icon"
@@ -92,7 +104,7 @@ export default function Head() {
               },
             ],
             affiliation: "International University, VNU-HCMC",
-            jobTitle: "Java Developer Intern / Researcher",
+            jobTitle: "Java Developer Intern / HCI Researcher",
             sameAs: [
               "https://github.com/nvhnam",
               "https://orcid.org/0009-0005-7710-6385",

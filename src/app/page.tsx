@@ -3,13 +3,15 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Sidebar from "@/components/Sidebar";
-import Home from "@/components/Home";
-import Experience from "@/components/Experience";
-import Publications from "@/components/Publications";
-import Cv from "@/components/Cv";
-import ProjectsPage from "./projects/page";
 
 const navItems = ["Home", "Experience", "Projects", "Publications"];
+
+import dynamic from "next/dynamic";
+
+const Home = dynamic(() => import("@/components/Home"));
+const Experience = dynamic(() => import("@/components/Experience"));
+const ProjectsPage = dynamic(() => import("./projects/page"));
+const Publications = dynamic(() => import("@/components/Publications"));
 
 export default function PortfolioLayout() {
   const [active, setActive] = useState("Home");
@@ -50,7 +52,9 @@ export default function PortfolioLayout() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3 }}
               className={`${
-                active !== "Experience" && active !== "Projects"
+                active !== "Experience" &&
+                active !== "Projects" &&
+                active !== "Publications"
                   ? "p-6 bg-white rounded-lg shadow"
                   : ""
               }`}

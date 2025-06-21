@@ -64,7 +64,9 @@ export default function Experience() {
       </Script>
 
       <span className="sr-only" itemProp="name">
-        Nguyen Viet Hoang Nam
+        Nguyen Viet Hoang Nam professional working experience in researching AI
+        advantages in positively influencing human behavior and as a
+        professional Java developer.
       </span>
       <meta itemProp="jobTitle" content="Java Developer Intern at Momo" />
       <meta itemProp="address" content="Vietnam" />

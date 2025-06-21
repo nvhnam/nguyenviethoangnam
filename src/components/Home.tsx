@@ -1,10 +1,17 @@
 import { awards, certificates, educations } from "@/constants";
 import Image from "next/image";
+// import Activity from "./Activity";
+import dynamic from "next/dynamic";
 
 /* eslint-disable react/no-unescaped-entities */
+const Activity = dynamic(() => import("@/components/Activity"));
 export default function Home() {
   return (
-    <main className="p-6 md:p-12 max-w-6xl mx-auto text-left md:text-justify space-y-6 ">
+    <main
+      itemScope
+      itemType="https://schema.org/Person"
+      className="p-6 md:p-12 max-w-6xl mx-auto text-left md:text-justify space-y-6 "
+    >
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -78,22 +85,24 @@ export default function Home() {
           }),
         }}
       />
+
       {/* Nguyen Viet Hoang Nam - personal portfolio */}
 
       <span className="sr-only">
         <strong>Nguyen Viet Hoang Nam</strong> is a researcher in HCI and
         computer vision, with works like VietFood67 and FoodDetector.{" "}
         <strong>Nguyen Viet Hoang Nam</strong> currently a Java Developer intern
-        at Momo in Vietnam
+        at <strong>Momo</strong> in Vietnam.
       </span>
       <article className="text-gray-800 leading-relaxed space-y-8 text-lg">
         <Image
           src="/profile/Nguyen Viet Hoang Nam.webp"
-          alt="Nguyen Viet Hoang Nam"
+          alt="Portrait of Nguyen Viet Hoang Nam"
           width={280}
           height={320}
           className="float-left mr-6 mb-4 rounded-lg object-cover"
           priority={true}
+          itemProp="image"
         />
 
         <section>
@@ -229,6 +238,8 @@ export default function Home() {
             ))}
           </ul>
         </section>
+
+        <Activity />
       </article>
     </main>
   );

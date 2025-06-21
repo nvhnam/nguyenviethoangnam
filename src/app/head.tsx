@@ -10,6 +10,7 @@ export default function Head() {
       <meta charSet="utf-8" />
       <meta name="theme-color" content="#ffffff" />
       <meta name="robots" content="index, follow" />
+      <meta name="application-name" content="Nguyen Viet Hoang Nam" />
       <meta property="og:type" content="website" />
       <meta property="og:image" content="/profile/Nguyen Viet Hoang Nam.webp" />
       <meta property="og:title" content="Nguyen Viet Hoang Nam | Portfolio" />

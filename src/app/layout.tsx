@@ -31,6 +31,12 @@ export const metadata: Metadata = {
     "research",
     "publications",
   ],
+  applicationName: "Nguyen Viet Hoang Nam",
+  appleWebApp: {
+    title: "Nguyen Viet Hoang Nam",
+    capable: true,
+    statusBarStyle: "default",
+  },
   authors: [
     {
       name: "Nguyen Viet Hoang Nam",

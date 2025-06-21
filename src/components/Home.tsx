@@ -74,7 +74,7 @@ export default function Home() {
                   "Human-Computer Interaction (HCI), particularly in applying computer vision, artificial intelligence, and VR/AR to improve health awareness and user interaction.",
               },
             ],
-            affiliation: "International University, VNU-HCMC",
+            affiliation: "Momo and International University, VNU-HCMC",
             jobTitle: "Java Developer Intern / Researcher",
             sameAs: [
               "https://github.com/nvhnam",

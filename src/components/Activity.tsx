@@ -59,7 +59,8 @@ const Activity = () => {
                   className="text-blue-600 underline"
                   itemProp="url"
                 >
-                  Learn more
+                  Learn more{" "}
+                  <span className="sr-only"> about {activity.title}</span>
                 </a>
               </p>
             </div>

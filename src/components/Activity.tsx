@@ -37,6 +37,7 @@ const Activity = () => {
                     : "object-center"
                 }`}
                 loading="lazy"
+                sizes="(max-width: 768px) 100vw, 280px"
                 itemProp="image"
               />
             </div>

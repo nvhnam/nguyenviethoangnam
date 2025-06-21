@@ -7,8 +7,9 @@ import Sidebar from "@/components/Sidebar";
 const navItems = ["Home", "Experience", "Projects", "Publications"];
 
 import dynamic from "next/dynamic";
+import Home from "@/components/Home";
 
-const Home = dynamic(() => import("@/components/Home"));
+// const Home = dynamic(() => import("@/components/Home"));
 const Experience = dynamic(() => import("@/components/Experience"));
 const ProjectsPage = dynamic(() => import("./projects/page"));
 const Publications = dynamic(() => import("@/components/Publications"));

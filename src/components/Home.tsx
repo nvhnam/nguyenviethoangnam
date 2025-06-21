@@ -103,6 +103,8 @@ export default function Home() {
           className="float-left mr-6 mb-4 rounded-lg object-cover"
           priority={true}
           itemProp="image"
+          loading="eager"
+          sizes="(max-width: 768px) 100vw, 280px"
         />
 
         <section>

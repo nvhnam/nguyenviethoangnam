@@ -24,6 +24,7 @@ export default function ProjectCard({
         <Image
           src={image}
           alt={`${title} Cover`}
+          sizes="(max-width: 768px) 100vw, 280px"
           fill
           className="object-cover"
           itemProp="image"

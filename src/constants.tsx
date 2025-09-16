@@ -73,6 +73,18 @@ export const awards = [
 export const conferenceProceedings = [
   {
     title:
+      "FlavorSync: An Interactive Multisensory Platform for Flavorful Smell and Taste Experience",
+    authors:
+      "Duong, T. N., Ha, N., Bao, V. H., Minh, H. N., Nguyen, V. H. N., Huynh, T., & Vi, C. T.",
+    year: 2025,
+    venue:
+      "The 38th Annual ACM Symposium on User Interface Software and Technology (UIST Adjunct '25), September 28-October 01, 2025, Busan, Republic of Korea. ACM, New York, NY, USA",
+    url: "https://camps.aptaracorp.com/ACM_PMS/PMS/ACM/UISTADJUNCT25/49/8e2bb259-704b-11f0-957d-16ffd757ba29/OUT/uistadjunct25-49.html",
+    abstract:
+      "This paper present FlavorSync, a novel system for simultaneously smell and taste stimulus delivery for the users. Prior systems have explored unisensory stimulation but fall short in coordinating these sensory channels in real time, which is an essential aspect of authentic flavor perception. FlavorSync has smell and taste dispensers that can control the timing, intensity, and duration of both smell and taste stimuli. A unified control interface enables precise temporal and volumetric control, supporting rich, multisensory experiences. This research aims to advance the field of multisensory interaction by offering a tool for synchronized smelling and tasting, which could be utilized in virtual reality, personalized health and nutrition, and the culinary arts.",
+  },
+  {
+    title:
       "Now I Know What I Am Eating: Real-Time Tracking and Nutritional Insights Using VietFood67 to Enhance User Experience",
     authors: "Nguyen, V. H. N., Tran, B. T., That, M. V. T., & Vi, C. T.",
     year: 2024,

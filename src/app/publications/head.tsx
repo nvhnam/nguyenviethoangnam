@@ -22,6 +22,7 @@ export default function Head() {
             knowsAbout: [
               "Computer Vision",
               "Human Behavior",
+              "FlavorSync",
               "Java Developer",
               "AI in Nutrition",
               "VietFood67",

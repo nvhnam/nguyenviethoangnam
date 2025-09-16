@@ -1,6 +1,5 @@
 import { awards, certificates, educations } from "@/constants";
 import Image from "next/image";
-// import Activity from "./Activity";
 import dynamic from "next/dynamic";
 
 /* eslint-disable react/no-unescaped-entities */

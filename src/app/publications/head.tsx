@@ -34,7 +34,7 @@ export default function Head() {
               "https://github.com/nvhnam",
               "https://orcid.org/0009-0005-7710-6385",
               "https://scholar.google.com/citations?user=EjUQvtUAAAAJ&hl=en",
-              "https://linkedin.com/in/nvhnam01",
+              "https://www.linkedin.com/in/nguyenviethoangnam",
             ],
           }),
         }}

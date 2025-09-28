@@ -77,9 +77,11 @@ export const conferenceProceedings = [
     authors:
       "Duong, T. N., Ha, N., Bao, V. H., Minh, H. N., Nguyen, V. H. N., Huynh, T., & Vi, C. T.",
     year: 2025,
+    datePublished: "2025/09/28",
     venue:
-      "The 38th Annual ACM Symposium on User Interface Software and Technology (UIST Adjunct '25), September 28-October 01, 2025, Busan, Republic of Korea. ACM, New York, NY, USA",
-    url: "https://camps.aptaracorp.com/ACM_PMS/PMS/ACM/UISTADJUNCT25/49/8e2bb259-704b-11f0-957d-16ffd757ba29/OUT/uistadjunct25-49.html",
+      "Adjunct Proceedings of the 38th Annual ACM Symposium on User Interface Software and Technology (UIST Adjunct '25), September 28-October 1, 2025, Busan, Republic of Korea. ACM, New York, NY, USA",
+    url: "https://doi.org/10.1145/3746058.3758395",
+    doi: "10.1145/3746058.3758395",
     abstract:
       "This paper present FlavorSync, a novel system for simultaneously smell and taste stimulus delivery for the users. Prior systems have explored unisensory stimulation but fall short in coordinating these sensory channels in real time, which is an essential aspect of authentic flavor perception. FlavorSync has smell and taste dispensers that can control the timing, intensity, and duration of both smell and taste stimuli. A unified control interface enables precise temporal and volumetric control, supporting rich, multisensory experiences. This research aims to advance the field of multisensory interaction by offering a tool for synchronized smelling and tasting, which could be utilized in virtual reality, personalized health and nutrition, and the culinary arts.",
   },
@@ -88,9 +90,11 @@ export const conferenceProceedings = [
       "Now I Know What I Am Eating: Real-Time Tracking and Nutritional Insights Using VietFood67 to Enhance User Experience",
     authors: "Nguyen, V. H. N., Tran, B. T., That, M. V. T., & Vi, C. T.",
     year: 2024,
+    datePublished: "2025/04/28",
     venue:
       "Information and Communication Technology – Proceedings of the 13th International Symposium on Information and Communication Technology (SOICT 2024), Communications in Computer and Information Science, vol. 2352, Springer, Singapore",
     url: "https://doi.org/10.1007/978-981-96-4288-5_35",
+    doi: "10.1007/978-981-96-4288-5_35",
     abstract:
       "Maintaining a balanced diet is vital for preventing diseases like diabetes and cancer, but busy lifestyles make tracking food intake difficult. Traditional dietary assessment methods, such as questionnaires, are often labor-intensive and inaccurate. The need for real-time, userfriendly nutrition tools has grown, especially after the COVID-19 pandemic. This paper introduces VietFood67, the biggest Vietnamese food dataset, featuring 33,003 images across 68 classes, including human face detection, built on VietFood57. A fine-tuned YOLOv10 model achieved a mAP50 score of 0.92, showing strong performance on the larger dataset. Additionally, the enhanced FoodDetector website now offers real-time nutritional information for detected dishes. A user study with 35 participants showed high satisfaction and increased nutritional awareness, highlighting the system’s potential to encourage healthier eating habits through efficient, online dietary tracking.",
   },
@@ -99,6 +103,7 @@ export const conferenceProceedings = [
       "Navigating Nutrition: Online Grocery Solutions with Traffic Light Labels and AI Support in Vietnam",
     authors: "Nguyen, V. H. N., Tran, B. T., Nguyen, S. H., & Vi, C. T.",
     year: 2024,
+    datePublished: "2024/10/28",
     venue: "International University Annual Scientific Conference",
     url: "https://drive.google.com/file/d/1mbRsFIv5GcVdwPfHO66movCc8WN9yFca/view?usp=sharing",
     abstract:
@@ -112,9 +117,11 @@ export const bookChapters = [
       "It’s Yummy: Real-Time Detection and Recognition of Vietnamese Dishes",
     authors: "Nguyen, V. H. N., & Vi, C. T.",
     year: 2025,
+    datePublished: "2025/05/13",
     venue:
       "In A. Bijalwan (Ed.), Navigating Computing Challenges for a Sustainable World (pp. 1–16). IGI Global Scientific Publishing",
     url: "https://doi.org/10.4018/979-8-3373-0462-5.ch001",
+    doi: "10.4018/979-8-3373-0462-5.ch001",
     abstract:
       "In today’s fast-paced society, the demands of work often overshadow the importance of healthy eating habits across various age groups. Poor dietary choices and irregular food consumption can lead to significant health issues, highlighting the need for tools that promote better eating behaviors. This paper presents VietFood57, a comprehensive Vietnamese food dataset consisting of 22,920 images across 57 local dish categories, along with an additional class for human faces, all annotated with bounding boxes. The YOLOv10 object detection model was fine-tuned on this dataset, achieving a high accuracy rate of 93.4%, surpassing previous results in Vietnamese food detection. Furthermore, FoodDetector, a web application integrating the model, was developed for real-time analysis of images, videos, webcams, and IP cameras. This system facilitates remote monitoring of eating behaviors in the elderly and assists users of all ages in tracking food intake, ultimately supporting healthier dietary habits across the population.",
   },

@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-sync-scripts */
+import { descriptionText, latestJob } from "@/constants";
 import "@/styles/globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -7,18 +8,20 @@ const inter = Inter({ subsets: ["latin"], weight: ["400", "600", "700"] });
 
 export const metadata: Metadata = {
   title: "Nguyen Viet Hoang Nam",
-  description:
-    "Official portfolio of Nguyen Viet Hoang Nam, who is a Java Developer Intern at Momo and Human-Computer Interaction researcher focused on AI, AR/VR, and computer vision. Explore his research, conference activities, and technical projects.",
+  description: `Official portfolio of Nguyen Viet Hoang Nam, who is a ${latestJob?.title} at ${latestJob?.company} and Human-Computer Interaction researcher focused on AI, AR/VR, and computer vision. Explore his research, conference activities, and technical projects.`,
   keywords: [
     "Nguyen Viet Hoang Nam",
     "Viet Hoang Nam Nguyen",
-    "Hoang Nam Java Developer",
+    `Hoang Nam ${latestJob?.title}`,
+    `Hoang Nam ${latestJob?.company}`,
+    `${latestJob?.title} at ${latestJob?.company}`,
+    `${latestJob?.title}`,
+    `${latestJob?.company}`,
     "VietFood67",
-    "Java Developer at Momo",
+    "Software Engineer",
+    "Software Engineering",
     "Vietnam",
     "Viet Nam",
-    "Java Developer Intern",
-    "Momo intern",
     "VietFood57",
     "FoodDetector",
     "Vietnamese Food Detection",
@@ -45,8 +48,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: "Nguyen Viet Hoang Nam",
-    description:
-      "Nguyen Viet Hoang Nam is a Java Developer Intern and Human-Computer Interaction researcher focused on AI, AR/VR, and computer vision. Explore his research, conference activities, and technical projects.",
+    description: descriptionText,
     url: "https://nguyenviethoangnam.vercel.app",
     siteName: "Nguyen Viet Hoang Nam",
     images: [
@@ -77,8 +79,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Nguyen Viet Hoang Nam",
-    description:
-      "Professional portfolio and projects by Nguyen Viet Hoang Nam, including food recognition, AI models, human-computer interaction (HCI) and UX research.",
+    description: descriptionText,
     images: ["https://nguyenviethoangnam.vercel.app/og-image.jpg"],
   },
   metadataBase: new URL("https://nguyenviethoangnam.vercel.app/"),

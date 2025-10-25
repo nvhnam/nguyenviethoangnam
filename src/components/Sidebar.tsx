@@ -13,6 +13,7 @@ import {
   UserCircle,
   Linkedin,
 } from "lucide-react";
+import { descriptionText } from "@/constants";
 
 export default function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,12 +37,7 @@ export default function Sidebar() {
         <Menu />
       </button>
 
-      <span className="sr-only">
-        <strong>Nguyen Viet Hoang Nam</strong> is a researcher in HCI and
-        computer vision, with works like VietFood67 and FoodDetector.{" "}
-        <strong>Nguyen Viet Hoang Nam</strong> currently a Java Developer intern
-        at <strong>Momo</strong> in Vietnam.
-      </span>
+      <span className="sr-only">{descriptionText}</span>
 
       <aside
         className={`fixed md:static z-30 top-0 left-0 h-full md:h-auto bg-white shadow-md w-64 transition-transform duration-300 ease-in-out
@@ -51,7 +47,7 @@ export default function Sidebar() {
         <div className="p-6 flex flex-col items-center">
           <Image
             src="/profile/Nguyen Viet Hoang Nam picture.webp"
-            alt="Nguyen Viet Hoang Nam — AI researcher and Java developer from Vietnam"
+            alt={descriptionText}
             width={150}
             height={150}
             className="rounded-full object-cover w-32 h-32 mb-4 border-4 border-blue-200"

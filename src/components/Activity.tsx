@@ -1,6 +1,6 @@
 "use client";
 
-import { activities } from "@/constants";
+import { activities, jsonLd } from "@/constants";
 import Head from "next/head";
 import Image from "next/image";
 
@@ -11,21 +11,7 @@ const Activity = () => {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Person",
-              name: "Nguyen Viet Hoang Nam",
-              sameAs: [
-                "https://github.com/nvhnam",
-                "https://orcid.org/0009-0005-7710-6385",
-                "https://scholar.google.com/citations?user=EjUQvtUAAAAJ&hl=en",
-                "https://www.linkedin.com/in/nguyenviethoangnam",
-              ],
-              affiliation: {
-                "@type": "Organization",
-                name: "International University - VNU HCMC",
-              },
-            }),
+            __html: JSON.stringify(jsonLd),
           }}
         />
       </Head>

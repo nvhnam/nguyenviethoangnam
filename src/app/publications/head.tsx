@@ -1,3 +1,5 @@
+import { jsonLd } from "@/constants";
+
 export default function Head() {
   return (
     <>
@@ -9,34 +11,7 @@ export default function Head() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Person",
-            name: "Nguyen Viet Hoang Nam",
-            affiliation: "International University, VNU-HCMC",
-            jobTitle: "HCI Researcher & Java Developer",
-            mainEntityOfPage: {
-              "@type": "WebPage",
-              "@id": "https://nguyenviethoangnam.vercel.app",
-            },
-            knowsAbout: [
-              "Computer Vision",
-              "Human Behavior",
-              "FlavorSync",
-              "Java Developer",
-              "AI in Nutrition",
-              "VietFood67",
-              "FoodDetector",
-              "Human-computer Interaction (HCI)",
-            ],
-            url: "https://nguyenviethoangnam.vercel.app",
-            sameAs: [
-              "https://github.com/nvhnam",
-              "https://orcid.org/0009-0005-7710-6385",
-              "https://scholar.google.com/citations?user=EjUQvtUAAAAJ&hl=en",
-              "https://www.linkedin.com/in/nguyenviethoangnam",
-            ],
-          }),
+          __html: JSON.stringify(jsonLd),
         }}
       />
     </>

@@ -1,4 +1,10 @@
-import { awards, certificates, educations, latestJob } from "@/constants";
+import {
+  awards,
+  certificates,
+  educations,
+  jsonLd,
+  latestJob,
+} from "@/constants";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 
@@ -14,74 +20,7 @@ export default function Home() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Person",
-            name: "Nguyen Viet Hoang Nam",
-            hasOccupation: [
-              {
-                "@type": "Occupation",
-                name: "Java Developer Intern",
-                hiringOrganization: {
-                  "@type": "Organization",
-                  name: "M_Service JSC (MoMo)",
-                },
-                startDate: "2025-06",
-                location: {
-                  "@type": "Place",
-                  address: {
-                    "@type": "PostalAddress",
-                    addressLocality: "Ho Chi Minh City",
-                    addressCountry: "Vietnam",
-                  },
-                },
-                description:
-                  "Developing and maintaining Java-based applications, collaborating in Agile teams, and improving code quality.",
-              },
-              {
-                "@type": "Occupation",
-                name: "IT Support Intern",
-                hiringOrganization: {
-                  "@type": "Organization",
-                  name: "Yusen Logistics Co., Ltd.",
-                },
-                startDate: "2023-07",
-                endDate: "2023-10",
-                location: {
-                  "@type": "Place",
-                  address: {
-                    "@type": "PostalAddress",
-                    addressLocality: "Ho Chi Minh City",
-                    addressCountry: "Vietnam",
-                  },
-                },
-                description:
-                  "Diagnosed and resolved technical issues across office workstations, wrote clear documentation for troubleshooting and software installations, and supported users with Microsoft Office, email systems, and basic networking.",
-              },
-              {
-                "@type": "Occupation",
-                name: "Researcher",
-                location: {
-                  "@type": "Place",
-                  address: {
-                    "@type": "PostalAddress",
-                    addressLocality: "Ho Chi Minh City",
-                    addressCountry: "Vietnam",
-                  },
-                },
-                description:
-                  "Human-Computer Interaction (HCI), particularly in applying computer vision, artificial intelligence, and VR/AR to improve health awareness and user interaction.",
-              },
-            ],
-            affiliation: "Momo and International University, VNU-HCMC",
-            jobTitle: "Software Engineering / Researcher",
-            sameAs: [
-              "https://github.com/nvhnam",
-              "https://orcid.org/0009-0005-7710-6385",
-              "https://scholar.google.com/citations?user=EjUQvtUAAAAJ&hl=en",
-              "https://linkedin.com/in/nvhnam01",
-            ],
-          }),
+          __html: JSON.stringify(jsonLd),
         }}
       />
 

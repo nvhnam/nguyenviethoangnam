@@ -149,3 +149,84 @@ function getLatestJob() {
 }
 
 export const latestJob = getLatestJob();
+
+export const jobTitle = latestJob?.title || "Software Engineer";
+
+const parseDateRange = (dateString: string) => {
+  if (!dateString) return {};
+  const [start, end] = dateString.split("–").map((s) => s.trim());
+  return {
+    startDate: start || undefined,
+    endDate: end && end.toLowerCase() !== "now" ? end : undefined,
+  };
+};
+const parseLocation = (loc: string) => {
+  if (!loc) return {};
+  const [city, country] = loc.split(",").map((s) => s.trim());
+  return {
+    addressLocality: city || undefined,
+    addressCountry: country || undefined,
+  };
+};
+const occupationSchema = workExperience.map((exp) => {
+  const { startDate, endDate } = parseDateRange(exp.date);
+  const { addressLocality, addressCountry } = parseLocation(
+    exp.location ? exp.location : "Ho Chi Minh City, Vietnam"
+  );
+  return {
+    "@type": "Occupation",
+    name: exp.position,
+    hiringOrganization: exp.company
+      ? {
+          "@type": "Organization",
+          name: exp.company,
+        }
+      : undefined,
+    startDate,
+    endDate,
+    location: {
+      "@type": "Place",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: addressLocality,
+        addressCountry: addressCountry,
+      },
+    },
+    description: exp.responsibilities
+      ? exp.responsibilities.join(" ")
+      : undefined,
+  };
+});
+
+export const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Nguyen Viet Hoang Nam",
+  jobTitle: `${jobTitle} / HCI Researcher`,
+  hasOccupation: occupationSchema,
+  affiliation: "International University, VNU-HCMC",
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": "https://nguyenviethoangnam.vercel.app",
+  },
+  knowsAbout: [
+    "Computer Vision",
+    "Human Behavior",
+    "FlavorSync",
+    jobTitle,
+    "Java Developer",
+    "AI in Nutrition",
+    "VietFood67",
+    "FoodDetector",
+    "Human-computer Interaction (HCI)",
+  ],
+  url: "https://nguyenviethoangnam.vercel.app",
+  sameAs: [
+    "https://github.com/nvhnam",
+    "https://orcid.org/0009-0005-7710-6385",
+    "https://scholar.google.com/citations?user=EjUQvtUAAAAJ&hl=en",
+    "https://linkedin.com/in/nvhnam01",
+  ],
+};
+
+export const descriptionText = `Nguyen Viet Hoang Nam is a ${jobTitle} at ${latestJob?.company} and a Human-Computer Interaction researcher focused on AI, AR/VR, and computer vision. Explore his research, conference activities, and technical projects.`;

@@ -36,11 +36,22 @@ export const activities = [
 export const workExperience = [
   {
     company: "M_Service JSC (MoMo)",
-    position: "Java Developer Intern",
-    date: "June 2025 – Now",
+    position: "Software Engineering Trainee",
+    date: "October 2025 – Now",
     location: "Ho Chi Minh City, Vietnam",
+    responsibilities: [
+      "Engineered backend API endpoints using Java Vert.x and gRPC modules for the high-throughput processing of user-submitted scam report information.",
+      "Developed and deployed an unsupervised machine learning system using K-means clustering to automatically detect anomalies in log metrics sourced from Prometheus, enhancing system monitoring capabilities.",
+    ],
+    logo: "/companies/momo_converted.webp",
+    slug: "momo-software-engineering-trainee",
+  },
+  {
+    company: "M_Service JSC (MoMo)",
+    position: "Java Developer Intern",
+    date: "June 2025 – September 2025",
     responsibilities: [],
-    slug: "Momo-java-developer-intern",
+    slug: "momo-java-developer-intern",
   },
   {
     company: "Yusen Logistics Co., Ltd.",
@@ -52,6 +63,7 @@ export const workExperience = [
       "Wrote clear documentation for troubleshooting processes and software installations, improving support efficiency and technical communication.",
       "Supported internal users with Microsoft Office, email systems, and basic network issues.",
     ],
+    logo: "/companies/yusen_converted_2.webp",
     slug: "yusen-logistics-it-intern",
   },
 ];
@@ -126,3 +138,14 @@ export const bookChapters = [
       "In today’s fast-paced society, the demands of work often overshadow the importance of healthy eating habits across various age groups. Poor dietary choices and irregular food consumption can lead to significant health issues, highlighting the need for tools that promote better eating behaviors. This paper presents VietFood57, a comprehensive Vietnamese food dataset consisting of 22,920 images across 57 local dish categories, along with an additional class for human faces, all annotated with bounding boxes. The YOLOv10 object detection model was fine-tuned on this dataset, achieving a high accuracy rate of 93.4%, surpassing previous results in Vietnamese food detection. Furthermore, FoodDetector, a web application integrating the model, was developed for real-time analysis of images, videos, webcams, and IP cameras. This system facilitates remote monitoring of eating behaviors in the elderly and assists users of all ages in tracking food intake, ultimately supporting healthier dietary habits across the population.",
   },
 ];
+
+function getLatestJob() {
+  if (!workExperience || workExperience.length === 0) return null;
+  const latest = workExperience[0];
+  return {
+    title: latest.position,
+    company: latest.company,
+  };
+}
+
+export const latestJob = getLatestJob();

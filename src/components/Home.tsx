@@ -1,4 +1,4 @@
-import { awards, certificates, educations } from "@/constants";
+import { awards, certificates, educations, latestJob } from "@/constants";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 
@@ -74,7 +74,7 @@ export default function Home() {
               },
             ],
             affiliation: "Momo and International University, VNU-HCMC",
-            jobTitle: "Java Developer Intern / Researcher",
+            jobTitle: "Software Engineering / Researcher",
             sameAs: [
               "https://github.com/nvhnam",
               "https://orcid.org/0009-0005-7710-6385",
@@ -90,8 +90,16 @@ export default function Home() {
       <span className="sr-only">
         <strong>Nguyen Viet Hoang Nam</strong> is a researcher in HCI and
         computer vision, with works like VietFood67 and FoodDetector.{" "}
-        <strong>Nguyen Viet Hoang Nam</strong> currently a Java Developer intern
-        at <strong>Momo</strong> in Vietnam.
+        <strong>Nguyen Viet Hoang Nam</strong> currently a{" "}
+        {latestJob ? (
+          <>
+            <strong>{latestJob.title}</strong> at{" "}
+            <strong>{latestJob.company}</strong>
+          </>
+        ) : (
+          "software engineer "
+        )}{" "}
+        in Vietnam.
       </span>
       <article className="text-gray-800 leading-relaxed space-y-8 text-lg">
         <Image
@@ -111,9 +119,17 @@ export default function Home() {
             Welcome to my personal website. I'm a recent gradutate majoring in{" "}
             <strong>Information Technology</strong> at International University
             – VNU-HCM, Vietnam and currently a{" "}
-            <strong>Java Developer Intern</strong> at Momo. This platform serves
-            as a hub to showcase my academic journey, research work, and passion
-            for using technology to create meaningful innovation.
+            {latestJob ? (
+              <>
+                <strong>{latestJob.title}</strong> at{" "}
+                <strong>{latestJob.company}</strong>
+              </>
+            ) : (
+              "software engineer"
+            )}
+            . This platform serves as a hub to showcase my academic journey,
+            research work, and passion for using technology to create meaningful
+            innovation.
           </p>
         </section>
 

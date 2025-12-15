@@ -40,7 +40,7 @@ export default function Sidebar() {
       <span className="sr-only">{descriptionText}</span>
 
       <aside
-        className={`fixed md:static z-30 top-0 left-0 h-full md:h-auto bg-white shadow-md w-64 transition-transform duration-300 ease-in-out
+        className={`fixed md:static z-30 top-0 left-0 h-full md:h-auto bg-white shadow-md w-64 overflow-y-auto overscroll-contain transition-transform duration-300 ease-in-out
           ${isOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"}
         `}
       >
@@ -64,10 +64,28 @@ export default function Sidebar() {
               <MapPin className="w-4 h-4 text-gray-600" />
               <span>Ho Chi Minh, Vietnam</span>
             </div>
-            <div className="flex items-center gap-2">
-              <MapPin className="w-4 h-4 text-gray-600" />
-              <span>International University</span>
+            <div className="flex items-start gap-2">
+              <MapPin className="w-4 h-4 text-gray-600 mt-0.5 shrink-0" />
+
+              <p
+                className="
+                  text-sm
+                  leading-snug
+                  break-words
+                  hyphens-auto
+                  max-w-[11rem]
+                  md:max-w-full
+                "
+              >
+                <span className="block font-medium md:inline">
+                  University of Information Technology
+                </span>
+                <span className="block text-xs text-gray-500 md:inline md:ml-1">
+                  (VNU-HCM)
+                </span>
+              </p>
             </div>
+
             <div className="flex items-center gap-2">
               <Mail className="w-4 h-4 text-red-400" />
               <a href="mailto:nvhnam01@gmail.com">nvhnam01@gmail.com</a>

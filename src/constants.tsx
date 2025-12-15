@@ -2,9 +2,17 @@ export const MY_CV_URL = "/cv/AI-Engineer-Intern_Nam-Nguyen_Resume.pdf";
 
 export const educations = [
   {
+    title: "M.Sc. in Computer Science",
+    institution:
+      "University of Information Technology, Vietnam National University Ho Chi Minh City (VNU-HCM), Vietnam",
+    time: "2025 - Present",
+    startTime: "2025",
+    endTime: "Present",
+  },
+  {
     title: "B.Eng. in Information Technology",
     institution:
-      "Vietnam National University, International University, Ho Chi Minh City, Vietnam",
+      "International University, Vietnam National University Ho Chi Minh City (VNU-HCM), Vietnam",
     time: "2019 - 2025",
     startTime: "2019",
     endTime: "2025",
@@ -198,13 +206,45 @@ const occupationSchema = workExperience.map((exp) => {
   };
 });
 
+const institutionMap: Record<string, { name: string; short?: string }> = {
+  "University of Information Technology": {
+    name: "University of Information Technology",
+    short: "UIT",
+  },
+  "International University": {
+    name: "International University",
+    short: "IU",
+  },
+};
+
+const affiliations = educations.map((edu) => {
+  const matchedInstitution = Object.keys(institutionMap).find((key) =>
+    edu.institution.includes(key)
+  );
+
+  const institution = matchedInstitution
+    ? institutionMap[matchedInstitution]
+    : { name: edu.institution };
+
+  return {
+    "@type": "EducationalOrganization",
+    name: institution.name,
+    alternateName: institution.short,
+    parentOrganization: {
+      "@type": "EducationalOrganization",
+      name: "Vietnam National University Ho Chi Minh City",
+      alternateName: "VNU-HCM",
+    },
+  };
+});
+
 export const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Nguyen Viet Hoang Nam",
   jobTitle: `${jobTitle} / HCI Researcher`,
   hasOccupation: occupationSchema,
-  affiliation: "International University, VNU-HCMC",
+  affiliation: affiliations,
   mainEntityOfPage: {
     "@type": "WebPage",
     "@id": "https://nguyenviethoangnam.vercel.app",

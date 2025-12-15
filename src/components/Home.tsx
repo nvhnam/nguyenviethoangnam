@@ -55,9 +55,9 @@ export default function Home() {
 
         <section>
           <p>
-            Welcome to my personal website. I'm a recent gradutate majoring in{" "}
-            <strong>Information Technology</strong> at International University
-            – VNU-HCM, Vietnam and currently a{" "}
+            Welcome to my personal website. Currently, I am a Master's student
+            in <strong>Computer Science</strong> at University of Information
+            Technology (UIT) - VNU-HCM, Vietnam, and a{" "}
             {latestJob ? (
               <>
                 <strong>{latestJob.title}</strong> at{" "}
@@ -99,7 +99,7 @@ export default function Home() {
               MySQL)
             </li>
             <li>Computer Vision (YOLO, OpenCV, Roboflow)</li>
-            <li>AI Integration (LangChain, CrewAI, Gemini API)</li>
+            <li>AI Integration (LangChain, CrewAI)</li>
             <li>
               Research Interests (HCI, Deep Learning, Computer Vision, VR/AR)
             </li>

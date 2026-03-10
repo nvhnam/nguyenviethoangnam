@@ -49,7 +49,7 @@ export const workExperience = [
     location: "Ho Chi Minh City, Vietnam",
     responsibilities: [
       "Engineered backend API endpoints using Java Vert.x and gRPC modules for the high-throughput processing of user-submitted scam report information.",
-      "Developed and deployed an unsupervised machine learning system using K-means clustering to automatically detect anomalies in log metrics sourced from Prometheus, enhancing system monitoring capabilities.",
+      "Developed and deployed an unsupervised machine learning system using K-means clustering to automatically detect anomalies in log metric volumes sourced from Prometheus, enhancing system monitoring capabilities.",
     ],
     logo: "/companies/momo_converted.webp",
     slug: "momo-software-engineering-trainee",
@@ -80,6 +80,10 @@ export const certificates = [
   {
     title: "IELTS - 7.5 (11/2024 - 11/2026)",
     link: "https://drive.google.com/file/d/1D9fx4QZ7_IgaWVPx9aUVj9p44eNUSDx2/view",
+  },
+  {
+    title: "NVIDIA - Applications of AI for Anomaly Detection (03/2026)",
+    link: "https://learn.nvidia.com/certificates?id=QqwDHNP0QXyuU8zSG0IBiw#",
   },
 ];
 
@@ -179,7 +183,7 @@ const parseLocation = (loc: string) => {
 const occupationSchema = workExperience.map((exp) => {
   const { startDate, endDate } = parseDateRange(exp.date);
   const { addressLocality, addressCountry } = parseLocation(
-    exp.location ? exp.location : "Ho Chi Minh City, Vietnam"
+    exp.location ? exp.location : "Ho Chi Minh City, Vietnam",
   );
   return {
     "@type": "Occupation",
@@ -219,7 +223,7 @@ const institutionMap: Record<string, { name: string; short?: string }> = {
 
 const affiliations = educations.map((edu) => {
   const matchedInstitution = Object.keys(institutionMap).find((key) =>
-    edu.institution.includes(key)
+    edu.institution.includes(key),
   );
 
   const institution = matchedInstitution

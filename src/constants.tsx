@@ -85,6 +85,10 @@ export const certificates = [
     title: "NVIDIA - Applications of AI for Anomaly Detection (03/2026)",
     link: "https://learn.nvidia.com/certificates?id=QqwDHNP0QXyuU8zSG0IBiw#",
   },
+  {
+    title: "Anthropic - Claude Code in Action (03/2026)",
+    link: "https://verify.skilljar.com/c/vn4ce6v4xzhc",
+  },
 ];
 
 export const awards = [

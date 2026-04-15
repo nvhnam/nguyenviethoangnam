@@ -93,13 +93,15 @@ export default function Home() {
             across:
           </p>
           <ul className="list-disc pl-6 mt-2">
-            <li>Programming Language (Python, Java, JavaScript)</li>
+            <li>Programming Language (Python, Java)</li>
             <li>
-              Backend Development (NodeJS, ExpressJS, Springboot, FastAPI,
-              MySQL)
+              Frameworks/Libraries (Vert.x, Springboot, FastAPI, LangGraph)
             </li>
-            <li>Computer Vision (YOLO, OpenCV, Roboflow)</li>
-            <li>AI Integration (LangChain, CrewAI)</li>
+            <li>Databases (MySQL, Oracle, PostgreSQL)</li>
+            <li>
+              Developer Tools (Claude Code, Gemini CLI, Git, RabbitMQ, Kafka,
+              MQTT, Unleash, OpenAI, Ollama, Grafana)
+            </li>
             <li>
               Research Interests (HCI, Deep Learning, Computer Vision, VR/AR)
             </li>

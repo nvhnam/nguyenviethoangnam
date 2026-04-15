@@ -21,6 +21,15 @@ export const educations = [
 
 export const activities = [
   {
+    title: "MoMo x AWS GameDay 2026 — Generative AI Challenge",
+    image: "/profile/momo_aws.webp",
+    alt: "Nguyen Viet Hoang Nam participating in MoMo x AWS GameDay 2026, focusing on generative AI solutions and cloud-based problem solving",
+    name: "MoMo x AWS GameDay 2026 Participant",
+    description:
+      "Participated in the MoMo x AWS GameDay 2026, a hands-on, team-based cloud competition focused on generative AI applications. Collaborated with teammates to solve real-world scenarios using AWS services, including designing scalable architectures, troubleshooting system issues, and implementing AI-driven solutions under time constraints. The event emphasized practical problem-solving, teamwork, and rapid prototyping in a cloud environment.",
+    link: "https://www.linkedin.com/posts/gasianpacificvietnam_recap-aws-gameday-unicorn-party-x-activity-7447970223632072704-BOLF",
+  },
+  {
     title: "SOICT 2024 — Symposium on Information and Communication Technology",
     image: "/profile/SOICT4.webp",
     alt: "Nguyen Viet Hoang Nam presenting paper at SOICT 2024 on real-time Vietnamese food tracking and nutrition analysis using VietFood67",
@@ -45,31 +54,36 @@ export const workExperience = [
   {
     company: "M_Service JSC (MoMo)",
     position: "Software Engineering Trainee",
-    date: "October 2025 – Now",
+    date: "September 2025 – Now",
     location: "Ho Chi Minh City, Vietnam",
     responsibilities: [
-      "Engineered backend API endpoints using Java Vert.x and gRPC modules for the high-throughput processing of user-submitted scam report information.",
-      "Developed and deployed an unsupervised machine learning system using K-means clustering to automatically detect anomalies in log metric volumes sourced from Prometheus, enhancing system monitoring capabilities.",
+      "Created MCP server module that allow Claude to get user Auto Debit information from Oracle database to answer user questions being reported from customer service team.",
+      "Leveraged Claude Code to extract and document business logic of MoMo's Auto Debit multi-module service into structured Markdown files, establishing a knowledge base for Q\&A in NotebookLM to support onboarding and knowledge transfer for new developers.",
+      "Developed an internal RAG module that take in user question (via both RabbitMQ and API request) and search across Confluence technical documentations for highly-related information before inputting those context to a GPT-OSS-120B via OpenAI for a complete answer.",
+      "Revamped MQTT services that send payment, balances notification to MoMo applications and sound boxes by implementing new topic level grouping logic across service modules that communicated via Kafka, RabbitMQ and gRPC. Ensured smooth roll out with dynamic app version compatible using Unleash.",
     ],
     logo: "/companies/momo_converted.webp",
     slug: "momo-software-engineering-trainee",
   },
   {
     company: "M_Service JSC (MoMo)",
-    position: "Java Developer Intern",
+    position: "IT Intern",
     date: "June 2025 – September 2025",
-    responsibilities: [],
+    responsibilities: [
+      "Built an internal AI-driven log trends anomaly detection tool using K-Means clustering, automatically analyzing Grafana log volumes across multiple metrics to identify abnormal trends within a 45-minute window. This tool is currently being used by MoMo’s Payment, Authentication, and Risk teams (SCore).",
+      "Designed and implemented backend API endpoints to handle API requests from mobile applications for scam information and internal services using gRPC for retrieving data from MySQL for frontend display.",
+      "Wrote technical documentation on Confluence to ensure alignment across different teams, including QC, mobile, and backend developers.",
+    ],
     slug: "momo-java-developer-intern",
   },
   {
     company: "Yusen Logistics Co., Ltd.",
-    position: "IT Support Intern",
+    position: "IT Intern",
     date: "July 2023 – October 2023",
     location: "Ho Chi Minh City, Vietnam",
     responsibilities: [
-      "Diagnosed and resolved technical issues across office workstations.",
-      "Wrote clear documentation for troubleshooting processes and software installations, improving support efficiency and technical communication.",
-      "Supported internal users with Microsoft Office, email systems, and basic network issues.",
+      "Refactored legacy SQL queries to enhance security by avoiding SQL injection risks and improving performance through efficient pagination and indexing under strict supervision of senior developers.",
+      "Created technical documentation for software usage procedure to align with the corporation new policy.",
     ],
     logo: "/companies/yusen_converted_2.webp",
     slug: "yusen-logistics-it-intern",

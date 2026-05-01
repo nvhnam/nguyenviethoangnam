@@ -52,27 +52,27 @@ export const activities = [
 
 export const workExperience = [
   {
-    company: "M_Service JSC (MoMo)",
+    company: "Online Mobile Services Joint Stock Company (MoMo)",
     position: "Software Engineering Trainee",
     date: "September 2025 – Now",
     location: "Ho Chi Minh City, Vietnam",
     responsibilities: [
-      "Created MCP server module that allow Claude to get user Auto Debit information from Oracle database to answer user questions being reported from customer service team.",
-      "Leveraged Claude Code to extract and document business logic of MoMo's Auto Debit multi-module service into structured Markdown files, establishing a knowledge base for Q\&A in NotebookLM to support onboarding and knowledge transfer for new developers.",
-      "Developed an internal RAG module that take in user question (via both RabbitMQ and API request) and search across Confluence technical documentations for highly-related information before inputting those context to a GPT-OSS-120B via OpenAI for a complete answer.",
-      "Revamped MQTT services that send payment, balances notification to MoMo applications and sound boxes by implementing new topic level grouping logic across service modules that communicated via Kafka, RabbitMQ and gRPC. Ensured smooth roll out with dynamic app version compatible using Unleash.",
+      "Customer Service Auto-Debit Module: Developed a Model Context Protocol (MCP) server for AI agents to query user Auto Debit data from Oracle databases, streamlining automated responses to customer inquiries.",
+      "Internal AI Knowledge Base (RAG): Engineered a Retrieval-Augmented Generation module processing queries via RabbitMQ and APIs. Performed embedding and retrieved context from more than 1200 internal Confluence docs using OpenAI (GPT-OSS-120B) to deliver comprehensive answers, accelerating developer onboarding.",
+      "Notification System Revamp: Upgraded MQTT services for payment and balance notifications across the app and soundboxes. Implemented topic-grouping features communicating via Kafka, RabbitMQ, and gRPC, managing flexible rollouts using Unleash.",
+      "Business Logic Extraction: Leveraged Claude Code to reverse-engineer and document multi-module Auto Debit services into structured Markdown, establishing a centralized knowledge base for n8n AI agent workflows.",
     ],
     logo: "/companies/momo_converted.webp",
     slug: "momo-software-engineering-trainee",
   },
   {
-    company: "M_Service JSC (MoMo)",
+    company: "Online Mobile Services Joint Stock Company (MoMo)",
     position: "IT Intern",
     date: "June 2025 – September 2025",
     responsibilities: [
-      "Built an internal AI-driven log trends anomaly detection tool using K-Means clustering, automatically analyzing Grafana log volumes across multiple metrics to identify abnormal trends within a 45-minute window. This tool is currently being used by MoMo’s Payment, Authentication, and Risk teams (SCore).",
-      "Designed and implemented backend API endpoints to handle API requests from mobile applications for scam information and internal services using gRPC for retrieving data from MySQL for frontend display.",
-      "Wrote technical documentation on Confluence to ensure alignment across different teams, including QC, mobile, and backend developers.",
+      "Anomaly Detection Tool: Developed an AI-driven log trends anomaly detection tool using the K-Means clustering algorithm. Automatically analyzed log volumes on Grafana to detect abnormal trends using a 45-minute window, adopted by Payment, Authentication, and Risk teams (SCore) at MoMo.",
+      "UserTrust API Integration: Designed and implemented backend API endpoints to handle mobile app requests for scam information. Integrated multiple internal services querying MySQL databases and communicating via gRPC.",
+      "Cross-Team Alignment: Produced Confluence technical documentation and Jira cards to align QC, mobile, and backend teams, improving clarity in Agile workflows.",
     ],
     slug: "momo-java-developer-intern",
   },
@@ -82,8 +82,8 @@ export const workExperience = [
     date: "July 2023 – October 2023",
     location: "Ho Chi Minh City, Vietnam",
     responsibilities: [
-      "Refactored legacy SQL queries to enhance security by avoiding SQL injection risks and improving performance through efficient pagination and indexing under strict supervision of senior developers.",
-      "Created technical documentation for software usage procedure to align with the corporation new policy.",
+      "Legacy System Optimization: Refactored legacy SQL queries to enhance security against SQL injection risks while improving performance through efficient pagination and indexing.",
+      "Compliance Documentation: Developed technical documentation for software usage procedures to comply with new corporate policies",
     ],
     logo: "/companies/yusen_converted_2.webp",
     slug: "yusen-logistics-it-intern",

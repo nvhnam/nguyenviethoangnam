@@ -20,14 +20,15 @@ const highlightAuthor = (authors: string) => {
   );
 };
 
-const groupByYear = (
-  list: typeof conferenceProceedings | typeof bookChapters
-) => {
-  return list.reduce((acc, item) => {
-    acc[item.year] = acc[item.year] || [];
-    acc[item.year].push(item);
-    return acc;
-  }, {} as Record<number, typeof conferenceProceedings[]>);
+const groupByYear = (list: Publication[]) => {
+  return list.reduce(
+    (acc, item) => {
+      acc[item.year] = acc[item.year] || [];
+      acc[item.year].push(item);
+      return acc;
+    },
+    {} as Record<number, Publication[]>
+  );
 };
 
 function renderCitationMetaFor(pub: Publication) {
@@ -88,10 +89,13 @@ function escapeHtml(str = "") {
 }
 
 export default function Publications() {
-  const groupedConference = groupByYear(conferenceProceedings);
-  const groupedBooks = groupByYear(bookChapters);
+  const allConference = conferenceProceedings as Publication[];
+  const allBooks = bookChapters as Publication[];
 
-  const allPubs = [...conferenceProceedings, ...bookChapters];
+  const groupedConference = groupByYear(allConference);
+  const groupedBooks = groupByYear(allBooks);
+
+  const allPubs = [...allConference, ...allBooks];
 
   return (
     <>
@@ -104,13 +108,11 @@ export default function Publications() {
         <link rel="canonical" href="https://nguyenviethoangnam.vercel.app" />
         {allPubs.map((p) => (
           <React.Fragment key={p.title}>
-            {renderCitationMetaFor(p as unknown as Publication)}
+            {renderCitationMetaFor(p)}
           </React.Fragment>
         ))}
       </Head>
       <div className="space-y-10">
-        {/* Nguyen Viet Hoang Nam - research publications */}
-
         <h1 className="sr-only">
           Research publications of Nguyen Viet Hoang Nam in HCI, Extended
           Reality (XR), and computer vision

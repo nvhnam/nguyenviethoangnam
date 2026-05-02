@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-sync-scripts */
 import { descriptionText, latestJob } from "@/constants";
 import "@/styles/globals.css";
 import type { Metadata } from "next";

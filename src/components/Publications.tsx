@@ -1,7 +1,17 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { bookChapters, conferenceProceedings } from "@/constants";
 import Head from "next/head";
 import React from "react";
+
+interface Publication {
+  title: string;
+  authors: string;
+  year: number;
+  datePublished?: string;
+  venue?: string;
+  doi?: string;
+  url?: string;
+  abstract?: string;
+}
 
 const highlightAuthor = (authors: string) => {
   return authors.replace(
@@ -17,10 +27,10 @@ const groupByYear = (
     acc[item.year] = acc[item.year] || [];
     acc[item.year].push(item);
     return acc;
-  }, {} as Record<number, typeof conferenceProceedings>);
+  }, {} as Record<number, typeof conferenceProceedings[]>);
 };
 
-function renderCitationMetaFor(pub: any) {
+function renderCitationMetaFor(pub: Publication) {
   const authorList = pub.authors
     .replace(/\s+&\s+/g, ", ")
     .split(/\s*,\s*/)
@@ -37,7 +47,7 @@ function renderCitationMetaFor(pub: any) {
         <meta name="citation_title" content="${escapeHtml(pub.title)}" />
         ${authorList
           .map(
-            (a: string | undefined) =>
+            (a: string) =>
               `<meta name="citation_author" content="${escapeHtml(a)}" />`
           )
           .join("\n")}
@@ -94,7 +104,7 @@ export default function Publications() {
         <link rel="canonical" href="https://nguyenviethoangnam.vercel.app" />
         {allPubs.map((p) => (
           <React.Fragment key={p.title}>
-            {renderCitationMetaFor(p)}
+            {renderCitationMetaFor(p as unknown as Publication)}
           </React.Fragment>
         ))}
       </Head>

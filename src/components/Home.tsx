@@ -10,6 +10,13 @@ import dynamic from "next/dynamic";
 
 /* eslint-disable react/no-unescaped-entities */
 const Activity = dynamic(() => import("@/components/Activity"));
+
+interface Award {
+  title: string;
+  date: string;
+  link?: string;
+}
+
 export default function Home() {
   return (
     <main
@@ -180,7 +187,7 @@ export default function Home() {
             Honors & Media
           </h2>
           <div className="space-y-6 text-base">
-            {awards.map((award: any, index) => (
+            {awards.map((award: Award, index) => (
               <div key={index} className="flex flex-col">
                 <div className="flex justify-between items-baseline">
                   <h3 className="font-bold text-gray-900">

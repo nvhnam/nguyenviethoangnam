@@ -176,25 +176,49 @@ export default function Home() {
         </section>
 
         <section itemScope itemType="https://schema.org/CreativeWork">
-          <h2 className="text-2xl font-semibold text-gray-900 mt-10 mb-4">
-            Awards
+          <h2 className="text-2xl font-semibold text-gray-900 mt-10 mb-6">
+            Honors & Media
           </h2>
-          <ul className="list-disc pl-6 text-base text-gray-700">
-            {awards.map((award, index) => (
-              <li key={index}>
-                {award.title}{" "}
-                <a
-                  href={award.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-600 underline"
-                  itemProp="url"
-                >
-                  [View]
-                </a>
-              </li>
+          <div className="space-y-6 text-base">
+            {awards.map((award: any, index) => (
+              <div key={index} className="flex flex-col">
+                <div className="flex justify-between items-baseline">
+                  <h3 className="font-bold text-gray-900">
+                    {award.title}
+                    {award.title !== "Featured in Thanh Nien Newspaper" && (
+                      <>
+                        {" "}
+                        <a
+                          href={award.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-blue-600 underline font-normal"
+                          itemProp="url"
+                        >
+                          [View]
+                        </a>
+                      </>
+                    )}
+                  </h3>
+                  <span className="italic text-gray-600 text-sm">
+                    {award.date}
+                  </span>
+                </div>
+                {award.title === "Featured in Thanh Nien Newspaper" &&
+                  award.link && (
+                    <a
+                      href={award.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 italic underline break-all mt-1"
+                      itemProp="url"
+                    >
+                      {award.link}
+                    </a>
+                  )}
+              </div>
             ))}
-          </ul>
+          </div>
         </section>
 
         <Activity />

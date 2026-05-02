@@ -107,7 +107,13 @@ export const certificates = [
 
 export const awards = [
   {
+    title: "Featured in Thanh Nien Newspaper",
+    date: "04/2026",
+    link: "https://thanhnien.vn/sinh-vien-viet-nam-co-bai-bao-a-tai-hoi-nghi-hang-dau-the-gioi-ve-nguoi-may-185260426111340038.htm",
+  },
+  {
     title: "Best Paper Runner-Up Award at SOICT 2024",
+    date: "12/2024",
     link: "https://drive.google.com/file/d/18-Fm370f3JQQHRhvzPCz9ztQUqQEk6c-/view",
   },
 ];
@@ -275,6 +281,9 @@ export const jsonLd = {
     "Computer Vision",
     "Human Behavior",
     "FlavorSync",
+    "Multisensory Interaction",
+    "Synchronized Smell and Taste",
+    "UIST",
     jobTitle,
     "Java Developer",
     "AI in Nutrition",
